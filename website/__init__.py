@@ -11,7 +11,7 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'secret_key'
     app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{DB_NAME}"
-    db.init(app)
+    db.init_app(app)
 
     # import views and auth file
     from .views import views
